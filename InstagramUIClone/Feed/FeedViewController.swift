@@ -14,6 +14,13 @@ class FeedViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        initialize()
+    }
+}
+
+//MARK: Private methods
+private extension FeedViewController {
+    func initialize() {
+        
     }
 }
