@@ -7,9 +7,9 @@
 //
 //  */
 
-import Foundation
+import UIKit
 
 enum FeedItemType {
-    case stoties
-    case posts
+    case stories(FeedStoriesItemCellInfo)
+    case posts(FeedPostItemInfo)
 }

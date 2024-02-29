@@ -16,10 +16,22 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         initialize()
     }
+    
+    //MARK: Private properties
+    private let tableView = UITableView()
+    private var items: [FeedItemType] = [
+        .stories([
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: true, isNewStories: false),
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesCellInfo(image: UIImage(named: "eli"), username: "Eli", isAddButtonVisibale: false, isNewStories: false),
+        ])
+    ]
 }
-
-//MARK: Private properties
-private let tableView = UITableView()
 
 //MARK: Private methods
 private extension FeedViewController {
@@ -77,9 +89,19 @@ private extension FeedViewController {
 //MARK: UITableViewDataSource
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let item = items[indexPath.row]
+        switch item {
+        case .stories(let info):
+            let cell = .tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+            
+        case .posts(let post):
+            let cell = .tableView.dequeueReusableCell(withIdentifier: <#T##String#>)
+
+        default:
+            <#code#>
+        }
     }
