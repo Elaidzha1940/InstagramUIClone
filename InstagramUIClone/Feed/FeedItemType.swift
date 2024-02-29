@@ -7,10 +7,8 @@
 //
 //  */
 
-import UIKit
-import SnapKit
 
 enum FeedItemType {
-    case stories(FeedStoriesItemCellInfo)
+    case stories(FeedStoriesCellInfo)
     case posts(FeedPostItemInfo)
 }

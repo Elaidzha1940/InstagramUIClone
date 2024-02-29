@@ -21,14 +21,14 @@ class FeedViewController: UIViewController {
     private let tableView = UITableView()
     private var items: [FeedItemType] = [
         .stories([
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: true, isNewStories: false),
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: false, isNewStories: false),
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: false, isNewStories: false),
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: false, isNewStories: false),
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesCellInfo(image: UIImage(named: "eli")!, username: "Eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: true, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
         ])
     ]
 }
@@ -41,6 +41,8 @@ private extension FeedViewController {
         navigationItem.leftBarButtonItems = makeLeftBarButtonItems()
         navigationItem.rightBarButtonItems = makeRightBarButtonItems()
         tableView.dataSource = self
+        tableView.register(FeedStoriesSetCell.self, forCellReuseIdentifier: String(describing: FeedStoriesSetCell.self))
+        tableView.register(FeedPostCell.self, forCellReuseIdentifier: String(describing: FeedPostCell.self))
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -96,11 +98,11 @@ extension FeedViewController: UITableViewDataSource {
         let item = items[indexPath.row]
         switch item {
         case .stories(let info):
-            let cell = .tableView.dequeueReusableCell(withIdentifier: String(describing: FeedStoriesSetCell.self), for: indexPath) as! FeedStoriesSetCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FeedStoriesSetCell.self), for: indexPath) as! FeedStoriesSetCell
             cell.configure(with: info)
             return cell
         case .posts(let post):
-            let cell = .tableView.dequeueReusableCell(withIdentifier: String(describing: FeedPostCell.self, for: indexPath)) as! FeedPostCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FeedPostCell.self), for: indexPath) as! FeedPostCell
             cell.configure(with: post)
             return cell
         }
