@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E419377E2B90BD740010E7F4 /* FeedItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419377D2B90BD740010E7F4 /* FeedItemType.swift */; };
+		E41937802B90BDB50010E7F4 /* FeedStoriesCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E419377F2B90BDB50010E7F4 /* FeedStoriesCellInfo.swift */; };
 		E4679FB32B8F94D800EECE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4679FB22B8F94D800EECE16 /* AppDelegate.swift */; };
 		E4679FB52B8F94D800EECE16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4679FB42B8F94D800EECE16 /* SceneDelegate.swift */; };
 		E4679FBC2B8F94D900EECE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4679FBB2B8F94D900EECE16 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E419377D2B90BD740010E7F4 /* FeedItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemType.swift; sourceTree = "<group>"; };
+		E419377F2B90BDB50010E7F4 /* FeedStoriesCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoriesCellInfo.swift; sourceTree = "<group>"; };
 		E4679FAF2B8F94D800EECE16 /* InstagramUIClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramUIClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4679FB22B8F94D800EECE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4679FB42B8F94D800EECE16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				E4679FC72B8F950E00EECE16 /* FeedViewController.swift */,
+				E419377D2B90BD740010E7F4 /* FeedItemType.swift */,
+				E419377F2B90BDB50010E7F4 /* FeedStoriesCellInfo.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 				E47BB8772B90A68300FFCDEB /* LogoView.swift in Sources */,
 				E4679FC82B8F950E00EECE16 /* FeedViewController.swift in Sources */,
 				E4679FB52B8F94D800EECE16 /* SceneDelegate.swift in Sources */,
+				E419377E2B90BD740010E7F4 /* FeedItemType.swift in Sources */,
+				E41937802B90BDB50010E7F4 /* FeedStoriesCellInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

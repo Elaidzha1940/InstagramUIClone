@@ -18,6 +18,9 @@ class FeedViewController: UIViewController {
     }
 }
 
+//MARK: Private properties
+private let tableView = UITableView()
+
 //MARK: Private methods
 private extension FeedViewController {
     func initialize() {
@@ -25,6 +28,11 @@ private extension FeedViewController {
         navigationController?.navigationBar.tintColor = .black
         navigationItem.leftBarButtonItems = makeLeftBarButtonItems()
         navigationItem.rightBarButtonItems = makeRightBarButtonItems()
+        tableView.dataSource = self
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     func makeLeftBarButtonItems() -> [UIBarButtonItem] {
@@ -47,11 +55,11 @@ private extension FeedViewController {
     }
     
     @objc func didTapLikedButton() {
-        
+        print("liked")
     }
     
     @objc func didTapMessageButton() {
-        
+        print("message")
     }
     
     func makeDropDownMenu() -> UIMenu {
@@ -66,3 +74,12 @@ private extension FeedViewController {
     }
 }
 
+//MARK: UITableViewDataSource
+extension FeedViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
