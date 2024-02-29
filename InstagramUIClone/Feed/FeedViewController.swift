@@ -21,16 +21,40 @@ class FeedViewController: UIViewController {
 //MARK: Private methods
 private extension FeedViewController {
     func initialize() {
-        view.backgroundColor = .gray
+        view.backgroundColor = .white
+        navigationController?.navigationBar.tintColor = .black
         navigationItem.leftBarButtonItems = makeLeftBarButtonItems()
+        navigationItem.rightBarButtonItems = makeRightBarButtonItems()
     }
     
     func makeLeftBarButtonItems() -> [UIBarButtonItem] {
-        let dropDownButtonItem = UIBarButtonItem(title: nil, image: UIImage(systemName: "chevron.down"), target: self, action: nil, menu: makedropDownMenu())
-        return [dropDownButtonItem]
+        let logoBarButtonItem = UIBarButtonItem(customView: LogoView())
+        
+        let originalImage = UIImage(systemName: "chevron.down")
+        let smallConfig = UIImage.SymbolConfiguration(scale: .small)
+        let smallImage = originalImage?.withConfiguration(smallConfig)
+        
+        let dropDownButtonItem = UIBarButtonItem(title: nil, image: smallImage, primaryAction: nil, menu: makeDropDownMenu())
+        return [logoBarButtonItem, dropDownButtonItem]
     }
     
-    func makedropDownMenu() -> UIMenu {
+    func makeRightBarButtonItems() -> [UIBarButtonItem] {
+        let likedBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(didTapLikedButton))
+        
+        let messageBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "message"), style: .plain, target: self, action: #selector(didTapMessageButton))
+        
+        return [messageBarButtonItem, likedBarButtonItem]
+    }
+    
+    @objc func didTapLikedButton() {
+        
+    }
+    
+    @objc func didTapMessageButton() {
+        
+    }
+    
+    func makeDropDownMenu() -> UIMenu {
         let subsItem = UIAction(title: "Subscriptions", image: UIImage(systemName: "person.2.fill")) { _ in
             print("Subs")
         }
@@ -41,3 +65,4 @@ private extension FeedViewController {
         return UIMenu(title: "", children: [subsItem, favsItem])
     }
 }
+

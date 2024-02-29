@@ -60,9 +60,9 @@
 		E4679FB12B8F94D800EECE16 /* InstagramUIClone */ = {
 			isa = PBXGroup;
 			children = (
+				E4679FC62B8F94FE00EECE16 /* Feed */,
 				E47BB8752B90A66D00FFCDEB /* Views */,
 				E4679FC92B8F952C00EECE16 /* Application */,
-				E4679FC62B8F94FE00EECE16 /* Feed */,
 				E4679FCA2B8F953C00EECE16 /* Resources */,
 			);
 			path = InstagramUIClone;

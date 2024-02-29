@@ -22,10 +22,9 @@ class LogoView: UIView {
     }
     
     //MARK: Private constants
-    
     private enum UIConstants {
-        static let LogoWidth: CGFloat = 104
-        static let LogoHeight: CGFloat = 30
+        static let LogoWidth: CGFloat = 125
+        static let LogoHeight: CGFloat = 40
     }
     
     //MARK: Private properties
