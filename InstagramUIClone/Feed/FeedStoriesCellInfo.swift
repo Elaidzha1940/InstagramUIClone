@@ -8,6 +8,7 @@
 //  */
 
 import UIKit
+import SnapKit
 
 struct FeedStoriesItemCellInfo {
     let image: UIImage

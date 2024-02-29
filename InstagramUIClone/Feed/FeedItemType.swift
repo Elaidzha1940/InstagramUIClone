@@ -8,6 +8,7 @@
 //  */
 
 import UIKit
+import SnapKit
 
 enum FeedItemType {
     case stories(FeedStoriesItemCellInfo)

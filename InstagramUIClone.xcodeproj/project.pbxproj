@@ -19,6 +19,7 @@
 		E47BB87E2B90AA5100FFCDEB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E47BB87D2B90AA5100FFCDEB /* SnapKit */; };
 		E47BB8802B90AA5100FFCDEB /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E47BB87F2B90AA5100FFCDEB /* SnapKit-Dynamic */; };
 		E4EDC97B2B912C74005C46C6 /* FeedStoriesSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EDC97A2B912C74005C46C6 /* FeedStoriesSetCell.swift */; };
+		E4EDC97D2B912D7C005C46C6 /* FeedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EDC97C2B912D7C005C46C6 /* FeedPostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E4679FC72B8F950E00EECE16 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		E47BB8762B90A68300FFCDEB /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		E4EDC97A2B912C74005C46C6 /* FeedStoriesSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoriesSetCell.swift; sourceTree = "<group>"; };
+		E4EDC97C2B912D7C005C46C6 /* FeedPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E4EDC97A2B912C74005C46C6 /* FeedStoriesSetCell.swift */,
+				E4EDC97C2B912D7C005C46C6 /* FeedPostCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				E4679FC82B8F950E00EECE16 /* FeedViewController.swift in Sources */,
 				E4EDC97B2B912C74005C46C6 /* FeedStoriesSetCell.swift in Sources */,
 				E4679FB52B8F94D800EECE16 /* SceneDelegate.swift in Sources */,
+				E4EDC97D2B912D7C005C46C6 /* FeedPostCell.swift in Sources */,
 				E419377E2B90BD740010E7F4 /* FeedItemType.swift in Sources */,
 				E41937802B90BDB50010E7F4 /* FeedStoriesCellInfo.swift in Sources */,
 			);

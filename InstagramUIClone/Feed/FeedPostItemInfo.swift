@@ -8,6 +8,7 @@
 //  */
 
 import UIKit
+import SnapKit
 
 struct FeedPostItemInfo {
     let userImage: UIImage
