@@ -12,8 +12,9 @@
 		E4679FBC2B8F94D900EECE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4679FBB2B8F94D900EECE16 /* Assets.xcassets */; };
 		E4679FBF2B8F94D900EECE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4679FBD2B8F94D900EECE16 /* LaunchScreen.storyboard */; };
 		E4679FC82B8F950E00EECE16 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4679FC72B8F950E00EECE16 /* FeedViewController.swift */; };
-		E4679FCD2B8F95B900EECE16 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E4679FCC2B8F95B900EECE16 /* SnapKit */; };
-		E4679FCF2B8F95B900EECE16 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E4679FCE2B8F95B900EECE16 /* SnapKit-Dynamic */; };
+		E47BB8772B90A68300FFCDEB /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47BB8762B90A68300FFCDEB /* LogoView.swift */; };
+		E47BB87E2B90AA5100FFCDEB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E47BB87D2B90AA5100FFCDEB /* SnapKit */; };
+		E47BB8802B90AA5100FFCDEB /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E47BB87F2B90AA5100FFCDEB /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E4679FBE2B8F94D900EECE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4679FC02B8F94D900EECE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4679FC72B8F950E00EECE16 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		E47BB8762B90A68300FFCDEB /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,8 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4679FCD2B8F95B900EECE16 /* SnapKit in Frameworks */,
-				E4679FCF2B8F95B900EECE16 /* SnapKit-Dynamic in Frameworks */,
+				E47BB87E2B90AA5100FFCDEB /* SnapKit in Frameworks */,
+				E47BB8802B90AA5100FFCDEB /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +60,7 @@
 		E4679FB12B8F94D800EECE16 /* InstagramUIClone */ = {
 			isa = PBXGroup;
 			children = (
+				E47BB8752B90A66D00FFCDEB /* Views */,
 				E4679FC92B8F952C00EECE16 /* Application */,
 				E4679FC62B8F94FE00EECE16 /* Feed */,
 				E4679FCA2B8F953C00EECE16 /* Resources */,
@@ -92,6 +95,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E47BB8752B90A66D00FFCDEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E47BB8762B90A68300FFCDEB /* LogoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,8 +120,8 @@
 			);
 			name = InstagramUIClone;
 			packageProductDependencies = (
-				E4679FCC2B8F95B900EECE16 /* SnapKit */,
-				E4679FCE2B8F95B900EECE16 /* SnapKit-Dynamic */,
+				E47BB87D2B90AA5100FFCDEB /* SnapKit */,
+				E47BB87F2B90AA5100FFCDEB /* SnapKit-Dynamic */,
 			);
 			productName = InstagramUIClone;
 			productReference = E4679FAF2B8F94D800EECE16 /* InstagramUIClone.app */;
@@ -141,7 +152,7 @@
 			);
 			mainGroup = E4679FA62B8F94D800EECE16;
 			packageReferences = (
-				E4679FCB2B8F95B900EECE16 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				E47BB87C2B90AA5100FFCDEB /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = E4679FB02B8F94D800EECE16 /* Products */;
 			projectDirPath = "";
@@ -170,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4679FB32B8F94D800EECE16 /* AppDelegate.swift in Sources */,
+				E47BB8772B90A68300FFCDEB /* LogoView.swift in Sources */,
 				E4679FC82B8F950E00EECE16 /* FeedViewController.swift in Sources */,
 				E4679FB52B8F94D800EECE16 /* SceneDelegate.swift in Sources */,
 			);
@@ -241,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -298,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -388,7 +400,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E4679FCB2B8F95B900EECE16 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		E47BB87C2B90AA5100FFCDEB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -399,14 +411,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E4679FCC2B8F95B900EECE16 /* SnapKit */ = {
+		E47BB87D2B90AA5100FFCDEB /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E4679FCB2B8F95B900EECE16 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = E47BB87C2B90AA5100FFCDEB /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		E4679FCE2B8F95B900EECE16 /* SnapKit-Dynamic */ = {
+		E47BB87F2B90AA5100FFCDEB /* SnapKit-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E4679FCB2B8F95B900EECE16 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = E47BB87C2B90AA5100FFCDEB /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
