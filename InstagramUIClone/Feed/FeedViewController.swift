@@ -22,14 +22,16 @@ class FeedViewController: UIViewController {
     private var items: [FeedItemType] = [
         .stories([
             FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "eli", isAddButtonVisibale: true, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "eli", isAddButtonVisibale: false, isNewStories: true),
             FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: false),
             FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "eli", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "eli", isAddButtonVisibale: false, isNewStories: false),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: false),
             FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "eli", isAddButtonVisibale: false, isNewStories: false),
             FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
         ])
+        
+        //.post(FeedPostCell(userImage ui))
     ]
 }
 
@@ -41,6 +43,7 @@ private extension FeedViewController {
         navigationItem.leftBarButtonItems = makeLeftBarButtonItems()
         navigationItem.rightBarButtonItems = makeRightBarButtonItems()
         tableView.dataSource = self
+        tableView.separatorColor = .clear
         tableView.register(FeedStoriesSetCell.self, forCellReuseIdentifier: String(describing: FeedStoriesSetCell.self))
         tableView.register(FeedPostCell.self, forCellReuseIdentifier: String(describing: FeedPostCell.self))
         view.addSubview(tableView)

@@ -16,6 +16,7 @@ class StoriesItemCell: UICollectionViewCell {
         imageView.image = info.image
         usernameLabel.text = info.userName
         plusButton.isHidden = !info.isAddButtonVisibale
+        circleImageView.isHidden = !info.isNewStories
     }
     
     //MARK: Init
@@ -37,7 +38,8 @@ class StoriesItemCell: UICollectionViewCell {
         static let imageToLabelOffset: CGFloat = 6
         
         static let plusButtonSize: CGFloat = 20
-         
+        
+        static let circleSize: CGFloat = 72
     }
     
     //MARK: Private properties
@@ -60,6 +62,12 @@ class StoriesItemCell: UICollectionViewCell {
         button.setImage(UIImage(named: "addbutton"), for: .normal)
         return button
     }()
+    
+    private let circleImageView: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "storyring")
+        return view
+    }()
 }
 
 //MARK: Private methods
@@ -81,6 +89,12 @@ private extension StoriesItemCell {
         plusButton.snp.makeConstraints { make in
             make.trailing.bottom.equalTo(imageView)
             make.size.equalTo(UIConstants.plusButtonSize)
+        }
+        
+        contentView.addSubview(circleImageView)
+        circleImageView.snp.makeConstraints { make in
+            make.center.equalTo(imageView)
+            make.size.equalTo(UIConstants.circleSize)
         }
     }
 }
