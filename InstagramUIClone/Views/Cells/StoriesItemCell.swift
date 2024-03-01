@@ -14,6 +14,8 @@ class StoriesItemCell: UICollectionViewCell {
     //MARK: Public
     func configure(with info: FeedStoriesItemCellInfo) {
         imageView.image = info.image
+        usernameLabel.text = info.userName
+        plusButton.isHidden = !info.isAddButtonVisibale
     }
     
     //MARK: Init
@@ -33,6 +35,9 @@ class StoriesItemCell: UICollectionViewCell {
         
         static let labelToCellInset: CGFloat = 6
         static let imageToLabelOffset: CGFloat = 6
+        
+        static let plusButtonSize: CGFloat = 20
+         
     }
     
     //MARK: Private properties
@@ -45,7 +50,15 @@ class StoriesItemCell: UICollectionViewCell {
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
+        label.font = .systemFont(ofSize: 15, weight: .medium)
+        label.textAlignment = .center
         return label
+    }()
+    
+    private let plusButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "addbutton"), for: .normal)
+        return button
     }()
 }
 
@@ -62,6 +75,12 @@ private extension StoriesItemCell {
         usernameLabel.snp.makeConstraints { make in
             make.leading.trailing.bottom.equalToSuperview().inset(UIConstants.labelToCellInset)
             make.top.equalTo(imageView.snp.bottom).offset(UIConstants.imageToLabelOffset)
+        }
+        
+        contentView.addSubview(plusButton)
+        plusButton.snp.makeConstraints { make in
+            make.trailing.bottom.equalTo(imageView)
+            make.size.equalTo(UIConstants.plusButtonSize)
         }
     }
 }

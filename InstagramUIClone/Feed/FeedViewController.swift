@@ -21,14 +21,14 @@ class FeedViewController: UIViewController {
     private let tableView = UITableView()
     private var items: [FeedItemType] = [
         .stories([
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: true, isNewStories: false),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: false),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: false),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: false),
-            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "Eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "eli", isAddButtonVisibale: true, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "eli", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "eli", isAddButtonVisibale: false, isNewStories: false),
+            FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
         ])
     ]
 }
@@ -61,9 +61,9 @@ private extension FeedViewController {
     }
     
     func makeRightBarButtonItems() -> [UIBarButtonItem] {
-        let likedBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(didTapLikedButton))
+        let likedBarButtonItem = UIBarButtonItem(image: UIImage(named: "heart"), style: .plain, target: self, action: #selector(didTapLikedButton))
         
-        let messageBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "message"), style: .plain, target: self, action: #selector(didTapMessageButton))
+        let messageBarButtonItem = UIBarButtonItem(image: UIImage(named: "message"), style: .plain, target: self, action: #selector(didTapMessageButton))
         
         return [messageBarButtonItem, likedBarButtonItem]
     }
