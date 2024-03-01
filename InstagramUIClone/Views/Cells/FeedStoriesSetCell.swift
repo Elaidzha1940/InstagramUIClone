@@ -43,16 +43,17 @@ class FeedStoriesSetCell: UITableViewCell {
 private extension FeedStoriesSetCell {
     func initialize() {
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(StoriesItemCell.self, forCellWithReuseIdentifier: String(describing: StoriesItemCell.self))
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.showsHorizontalScrollIndicator = false
         contentView.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
             make.height.equalTo(UIConstants.collectionViewHeight)
         }
-        
     }
 }
 
