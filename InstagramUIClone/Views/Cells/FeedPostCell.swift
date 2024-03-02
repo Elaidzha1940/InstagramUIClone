@@ -36,6 +36,9 @@ class FeedPostCell: UITableViewCell {
         static let userImageTopInset: CGFloat = 6
         static let userNameStackProfileImageOffset: CGFloat = 12
         static let postImageToUserImageOffset: CGFloat = 6
+        static let actionStackHeight: CGFloat = 24
+        static let actionStackToPostImageOffset: CGFloat = 12
+        static let actionsStackSpacing: CGFloat = 12
     }
     
     //MARK: Private properties
@@ -72,6 +75,33 @@ class FeedPostCell: UITableViewCell {
         let view = UIImageView()
         return view
     }()
+    
+    private let likeButton: UIButton = {
+        let button = UIButton(type: .system)
+        if let image = UIImage(systemName: "heart") {
+            let tintedImage = image.withTintColor(.label, renderingMode: .alwaysOriginal)
+            button.setImage(tintedImage, for: .normal)
+        }
+        return button
+    }()
+    
+    private let commentButton: UIButton = {
+        let button = UIButton(type: .system)
+        if let image = UIImage(systemName: "message") {
+            let tintedImage = image.withTintColor(.label, renderingMode: .alwaysOriginal)
+            button.setImage(tintedImage, for: .normal)
+        }
+        return button
+    }()
+    
+    private let shareButton: UIButton = {
+        let button = UIButton(type: .system)
+        if let image = UIImage(systemName: "paperplane") {
+            let tintedImage = image.withTintColor(.label, renderingMode: .alwaysOriginal)
+            button.setImage(tintedImage, for: .normal)
+        }
+        return button
+    }()
 }
 
 // MARK: Private methods
@@ -105,6 +135,19 @@ private extension FeedPostCell {
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(userImageView.snp.bottom).offset(UIConstants.postImageToUserImageOffset)
             make.height.equalTo(contentView.snp.width)
+        }
+        
+        let actionStack = UIStackView()
+        actionStack.axis = .horizontal
+        actionStack.addArrangedSubview(likeButton)
+        actionStack.addArrangedSubview(commentButton)
+        actionStack.addArrangedSubview(shareButton)
+        actionStack.spacing = UIConstants.actionsStackSpacing
+        contentView.addSubview(actionStack)
+        actionStack.snp.makeConstraints { make in
+            make.height.equalTo(UIConstants.actionStackHeight)
+            make.leading.equalToSuperview().inset(UIConstants.contentInset)
+            make.top.equalTo(postImageView.snp.bottom).offset(UIConstants.actionStackToPostImageOffset)
         }
     }
 }
