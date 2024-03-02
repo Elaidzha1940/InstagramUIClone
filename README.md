@@ -36,7 +36,7 @@ Installation:
 
 -------------
 
-Button
+UIButton with an ellipsis icon and a background color matching the system background color.
 =======
 ```````ruby
    private let optionsButton: UIButton = {
