@@ -33,3 +33,20 @@ Installation:
 - Clone the repository to your local machine.
 - Open the project in Xcode.
 - Build and run the project on a simulator or device.    
+
+-------------
+
+Button
+=======
+```````ruby
+   private let optionsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .systemBackground
+        if let image = UIImage(systemName: "ellipsis") {
+            let tintedImage = image.withTintColor(.label, renderingMode: .alwaysOriginal)
+            button.setImage(tintedImage, for: .normal)
+        }
+        return button
+    }()
+```````
+-------
