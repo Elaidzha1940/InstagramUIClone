@@ -30,7 +30,8 @@ class FeedViewController: UIViewController {
             FeedStoriesItemCellInfo(image: UIImage(named: "eli1")!, userName: "eli", isAddButtonVisibale: false, isNewStories: false),
             FeedStoriesItemCellInfo(image: UIImage(named: "eli")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
         ]),
-        .posts(FeedPostItemInfo(userImage: UIImage(named: "eli1")!, userName: "shchukin", postSubtitle: "Sponsored", postImage: UIImage(named: "eli1")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Elaidzha_Shchukin", commentText: "Good luck, buddy!")))
+        
+        .posts(FeedPostItemInfo(userImage: UIImage(named: "eli1")!, userName: "elaidzha_shchukin", postSubtitle: "Wat Arun", postImage: UIImage(named: "eli1")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "shchukin", commentText: "Good luck, buddy!")))
     ]
 }
 

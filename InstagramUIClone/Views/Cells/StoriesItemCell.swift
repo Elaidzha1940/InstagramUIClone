@@ -33,12 +33,9 @@ class StoriesItemCell: UICollectionViewCell {
     private enum UIConstants {
         static let imageSize: CGFloat = 60
         static let imageToCellInset: CGFloat = 6
-        
         static let labelToCellInset: CGFloat = 6
         static let imageToLabelOffset: CGFloat = 6
-        
         static let plusButtonSize: CGFloat = 20
-        
         static let circleSize: CGFloat = 72
     }
     
