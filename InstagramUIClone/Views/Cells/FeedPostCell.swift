@@ -17,6 +17,7 @@ class FeedPostCell: UITableViewCell {
         userNameLabel.text = info.userName
         subtitleLabel.text = info.userName
         postImageView.image = info.userImage
+        likesLabel.text = "\(info.numberOfLikes) Likes"
     }
     
     //MARK: Init
@@ -39,6 +40,7 @@ class FeedPostCell: UITableViewCell {
         static let actionStackHeight: CGFloat = 24
         static let actionStackToPostImageOffset: CGFloat = 12
         static let actionsStackSpacing: CGFloat = 12
+        static let actionsStackToLikesLabelOffset: CGFloat = 12
     }
     
     //MARK: Private properties
@@ -102,6 +104,12 @@ class FeedPostCell: UITableViewCell {
         }
         return button
     }()
+    
+    private let likesLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 15, weight: .bold)
+        return label
+    }()
 }
 
 // MARK: Private methods
@@ -148,6 +156,12 @@ private extension FeedPostCell {
             make.height.equalTo(UIConstants.actionStackHeight)
             make.leading.equalToSuperview().inset(UIConstants.contentInset)
             make.top.equalTo(postImageView.snp.bottom).offset(UIConstants.actionStackToPostImageOffset)
+        }
+        
+        contentView.addSubview(likesLabel)
+        likesLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(UIConstants.contentInset)
+            make.top.equalTo(actionStack.snp.bottom).offset(UIConstants.actionsStackToLikesLabelOffset)
         }
     }
 }
