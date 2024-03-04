@@ -84,7 +84,7 @@ class FeedPostCell: UITableViewCell {
     
     private let likeButton: UIButton = {
         let button = UIButton(type: .system)
-        if let image = UIImage(systemName: "heart") {
+        if let image = UIImage(named: "cheart") {
             let tintedImage = image.withTintColor(.label, renderingMode: .alwaysOriginal)
             button.setImage(tintedImage, for: .normal)
         }
@@ -93,7 +93,7 @@ class FeedPostCell: UITableViewCell {
     
     private let commentButton: UIButton = {
         let button = UIButton(type: .system)
-        if let image = UIImage(systemName: "message") {
+        if let image = UIImage(named: "cmessage") {
             let tintedImage = image.withTintColor(.label, renderingMode: .alwaysOriginal)
             button.setImage(tintedImage, for: .normal)
         }
@@ -102,7 +102,7 @@ class FeedPostCell: UITableViewCell {
     
     private let shareButton: UIButton = {
         let button = UIButton(type: .system)
-        if let image = UIImage(systemName: "paperplane") {
+        if let image = UIImage(named: "paperplane") {
             let tintedImage = image.withTintColor(.label, renderingMode: .alwaysOriginal)
             button.setImage(tintedImage, for: .normal)
         }

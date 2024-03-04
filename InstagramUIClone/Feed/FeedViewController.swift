@@ -62,13 +62,14 @@ private extension FeedViewController {
     func makeLeftBarButtonItems() -> [UIBarButtonItem] {
         let logoBarButtonItem = UIBarButtonItem(customView: LogoView())
         
-        let originalImage = UIImage(systemName: "chevron.down")
+        let originalImage = UIImage(named: "down")
         let smallConfig = UIImage.SymbolConfiguration(scale: .small)
         let smallImage = originalImage?.withConfiguration(smallConfig)
         
         let dropDownButtonItem = UIBarButtonItem(title: nil, image: smallImage, primaryAction: nil, menu: makeDropDownMenu())
         return [logoBarButtonItem, dropDownButtonItem]
     }
+    
     
     func makeRightBarButtonItems() -> [UIBarButtonItem] {
         let likedBarButtonItem = UIBarButtonItem(image: UIImage(named: "heart"), style: .plain, target: self, action: #selector(didTapLikedButton))
