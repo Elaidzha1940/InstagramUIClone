@@ -30,7 +30,7 @@ class FeedViewController: UIViewController {
             FeedStoriesItemCellInfo(image: UIImage(named: "6")!, userName: "eli", isAddButtonVisibale: false, isNewStories: false),
             FeedStoriesItemCellInfo(image: UIImage(named: "7")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
         ]),
-            .posts(FeedPostItemInfo(userImage: UIImage(named: "1")!, userName: "Elaidzha_shchukin", postSubtitle: "Sponsored", postImage: UIImage(named: "1")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
+        .posts(FeedPostItemInfo(userImage: UIImage(named: "1")!, userName: "Elaidzha_shchukin", postSubtitle: "Sponsored", postImage: UIImage(named: "1")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
         
             .posts(FeedPostItemInfo(userImage: UIImage(named: "2")!, userName: "Elaidzha_shchukin", postSubtitle: "", postImage: UIImage(named: "2")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
         
@@ -69,14 +69,33 @@ private extension FeedViewController {
         let dropDownButtonItem = UIBarButtonItem(title: nil, image: smallImage, primaryAction: nil, menu: makeDropDownMenu())
         return [logoBarButtonItem, dropDownButtonItem]
     }
-    
+        
     
     func makeRightBarButtonItems() -> [UIBarButtonItem] {
-        let likedBarButtonItem = UIBarButtonItem(image: UIImage(named: "heart"), style: .plain, target: self, action: #selector(didTapLikedButton))
+        //MARK: Light / Heart
+        let lightHeartImage = UIImage(named: "heart")?.withTintColor(.label, renderingMode: .alwaysOriginal)
         
-        let messageBarButtonItem = UIBarButtonItem(image: UIImage(named: "message"), style: .plain, target: self, action: #selector(didTapMessageButton))
+        //MARK: Dark / Heart
+        let darkHeartImage = UIImage(named: "heart")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         
-        return [messageBarButtonItem, likedBarButtonItem]
+        //MARK: Light / Message
+        let lightMessageImage = UIImage(named: "message")?.withTintColor(.label, renderingMode: .alwaysOriginal)
+        
+        //MARK: Dark / Message
+        let darkMessageImage = UIImage(named: "message")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        
+        //MARK: Get current them of UI
+        let currentInterfaceStyle = UIScreen.main.traitCollection.userInterfaceStyle
+        
+        //MARK: UIBarButtonItem switch "heart"
+        let switchableHeartImage = currentInterfaceStyle == .dark ? darkHeartImage : lightHeartImage
+        let heartBarButtonItem = UIBarButtonItem(image: switchableHeartImage, style: .plain, target: self, action: #selector(didTapLikedButton))
+        
+        //MARK: UIBarButtonItem switch "message"
+        let switchableMessageImage = currentInterfaceStyle == .dark ? darkMessageImage : lightMessageImage
+        let messageBarButtonItem = UIBarButtonItem(image: switchableMessageImage, style: .plain, target: self, action: #selector(didTapMessageButton))
+        
+        return [messageBarButtonItem, heartBarButtonItem]
     }
     
     @objc func didTapLikedButton() {
@@ -87,12 +106,12 @@ private extension FeedViewController {
         print("message")
     }
     
-    func makeDropDownMenu() -> UIMenu {
-        let subsItem = UIAction(title: "Subscriptions", image: UIImage(systemName: "person.2.fill")) { _ in
+    @objc func makeDropDownMenu() -> UIMenu {
+        let subsItem = UIAction(title: "Subscriptions", image: UIImage(systemName: "person.2")) { _ in
             print("Subs")
         }
         
-        let favsItem = UIAction(title: "Favorites", image: UIImage(systemName: "star.fill")) { _ in
+        let favsItem = UIAction(title: "Favorites", image: UIImage(systemName: "star")) { _ in
             print("Favs")
         }
         return UIMenu(title: "", children: [subsItem, favsItem])
