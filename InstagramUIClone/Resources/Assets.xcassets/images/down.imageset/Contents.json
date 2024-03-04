@@ -1,6 +1,16 @@
 {
   "images" : [
     {
+      "filename" : "downlight.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
       "filename" : "down.png",
       "idiom" : "universal"
     }

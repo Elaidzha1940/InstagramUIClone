@@ -28,16 +28,16 @@ class LogoView: UIView {
     }
     
     //MARK: Private properties
-//    private let imageView: UIImageView = {
-//        let view = UIImageView()
-//        view.image = UIImage(named: "cinsta")
-//        return view
-//    }()
+    //    private let imageView: UIImageView = {
+    //        let view = UIImageView()
+    //        view.image = UIImage(named: "insta")
+    //        return view
+    //    }()
     
     private let imageView: UIImageView = {
         let view = UIImageView()
         let currentInterfaceStyle = UIScreen.main.traitCollection.userInterfaceStyle
-        let imageName = currentInterfaceStyle == .dark ? "insta-light" : "insta-dark"
+        let imageName = currentInterfaceStyle == .light ? "insta-dark" : "insta-light"
         view.image = UIImage(named: imageName)
         return view
     }()
