@@ -19,7 +19,7 @@ class FeedPostCell: UITableViewCell {
         postImageView.image = info.userImage
         likesLabel.text = "\(info.numberOfLikes) Likes"
         if let comment = info.comment {
-            commentLabel.text = comment.userName + "" + comment.commentText
+            configureCommentLabel(with: comment)
         }
     }
     
@@ -36,7 +36,7 @@ class FeedPostCell: UITableViewCell {
     //MARK: Private constants
     private enum UIConstants {
         static let userImageSize: CGFloat = 40
-        static let contentInset: CGFloat = 12
+        static let contentInset: CGFloat = 14
         static let userImageTopInset: CGFloat = 6
         static let userNameStackProfileImageOffset: CGFloat = 12
         static let postImageToUserImageOffset: CGFloat = 6
@@ -178,7 +178,16 @@ private extension FeedPostCell {
         commentLabel.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(UIConstants.contentInset)
             make.top.equalTo(likesLabel.snp.bottom).offset(UIConstants.commentToLikesOffset)
+            make.bottom.equalToSuperview().inset(UIConstants.contentInset)
         }
+    }
+    
+    func configureCommentLabel(with comment: CommentShortInfo) {
+        let string = comment.userName + "" + comment.commentText
+        let attributedString = NSMutableAttributedString(string: string)
+        let range = NSRange(location: .zero, length: comment.userName.count)
+        attributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 15, weight: .bold), range: range)
+        commentLabel.attributedText = attributedString
     }
 }
 
