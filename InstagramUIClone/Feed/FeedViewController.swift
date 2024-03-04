@@ -30,15 +30,15 @@ class FeedViewController: UIViewController {
             FeedStoriesItemCellInfo(image: UIImage(named: "6")!, userName: "eli", isAddButtonVisibale: false, isNewStories: false),
             FeedStoriesItemCellInfo(image: UIImage(named: "7")!, userName: "elaidzha", isAddButtonVisibale: false, isNewStories: true),
         ]),
-            .posts(FeedPostItemInfo(userImage: UIImage(named: "1")!, userName: "Elaidzha_shchu", postSubtitle: "Wat Arun", postImage: UIImage(named: "1")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
+            .posts(FeedPostItemInfo(userImage: UIImage(named: "1")!, userName: "Elaidzha_shchukin", postSubtitle: "Sponsored", postImage: UIImage(named: "1")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
         
-            .posts(FeedPostItemInfo(userImage: UIImage(named: "2")!, userName: "Elaidzha_shchu", postSubtitle: "Wat Arun", postImage: UIImage(named: "2")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
+            .posts(FeedPostItemInfo(userImage: UIImage(named: "2")!, userName: "Elaidzha_shchukin", postSubtitle: "", postImage: UIImage(named: "2")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
         
-            .posts(FeedPostItemInfo(userImage: UIImage(named: "3")!, userName: "Elaidzha_shchu", postSubtitle: "Wat Arun", postImage: UIImage(named: "3")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
+            .posts(FeedPostItemInfo(userImage: UIImage(named: "3")!, userName: "Elaidzha_shchukin", postSubtitle: "Wat Arun", postImage: UIImage(named: "3")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
         
-            .posts(FeedPostItemInfo(userImage: UIImage(named: "4")!, userName: "Elaidzha_shchu", postSubtitle: "Wat Arun", postImage: UIImage(named: "4")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
+            .posts(FeedPostItemInfo(userImage: UIImage(named: "4")!, userName: "Elaidzha_shchukin", postSubtitle: "", postImage: UIImage(named: "4")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
         
-            .posts(FeedPostItemInfo(userImage: UIImage(named: "5")!, userName: "Elaidzha_shchu", postSubtitle: "Wat Arun", postImage: UIImage(named: "5")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
+            .posts(FeedPostItemInfo(userImage: UIImage(named: "5")!, userName: "Elaidzha_shchukin", postSubtitle: "", postImage: UIImage(named: "5")!, numberOfLikes: 828, comment: CommentShortInfo(userName: "Shchukin", commentText: "Hey, that looks awesome!"))),
     ]
 }
 

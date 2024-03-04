@@ -125,7 +125,7 @@ class FeedPostCell: UITableViewCell {
 // MARK: Private methods
 private extension FeedPostCell {
     func initialize() {
-        //selectionStyle = .none
+        selectionStyle = .none
         contentView.addSubview(userImageView)
         userImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(UIConstants.contentInset)
@@ -183,7 +183,7 @@ private extension FeedPostCell {
     }
     
     func configureCommentLabel(with comment: CommentShortInfo) {
-        let string = comment.userName + "" + comment.commentText
+        let string = comment.userName + " " + comment.commentText
         let attributedString = NSMutableAttributedString(string: string)
         let range = NSRange(location: .zero, length: comment.userName.count)
         attributedString.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 15, weight: .bold), range: range)
