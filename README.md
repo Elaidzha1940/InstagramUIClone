@@ -4,7 +4,8 @@ Instagram-UI-Clone.
 Welcome to InstagramUIClone, a project aimed at replicating the UI of Instagram using UIKit and SnapKit.
 -------------------
 
-dddddd
+<img width="825" alt="Screenshot 2024-03-05 at 03 19 15" src="https://github.com/Elaidzha1940/InstagramUIClone/assets/64445918/b8bffac9-c4ea-43e1-9882-bb29c35df38d">
+
 
 Introduction:
 -------------
